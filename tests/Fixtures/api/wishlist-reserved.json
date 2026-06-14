@@ -1,0 +1,41 @@
+{
+  "items": [
+    {
+      "_id": "87677c5c51193df772326021",
+      "trackingId": null,
+      "createdAt": "2025-01-06T22:42:25.000Z",
+      "updatedAt": "2025-01-06T22:42:25.000Z",
+      "title": "reserved item",
+      "description": null,
+      "price": 5,
+      "link": "https://market.yandex.ru/cc/7BTYxg",
+      "photo": "/s3/images/wish-photo/2025/01/06/1CJwtkLTdpESG4H3X1ZzAR.webp",
+      "photos": [],
+      "icon": null,
+      "color": null,
+      "private": false,
+      "visibility": "public",
+      "fulfilled": false,
+      "currency": "USD",
+      "creatorId": "bb677c0ecd14900917853653",
+      "creator": {
+        "_id": "bb677c0ecd14900917853653",
+        "username": "dream",
+        "avatar": null,
+        "fullName": "vasily ",
+        "isPro": false,
+        "accountType": "user"
+      },
+      "copiedByMe": false,
+      "assigned": false,
+      "assignedByMe": false,
+      "idea": false,
+      "reservedUntil": null,
+      "isExternalUriBlocked": false,
+      "wish_lists": [],
+      "actionButtonText": "where_to_buy",
+      "assignee": null,
+      "oneTimeGift": false
+    }
+  ]
+}

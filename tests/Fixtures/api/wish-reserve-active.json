@@ -1,0 +1,47 @@
+{
+  "item": {
+    "id": "b86a16f2a71fc96309212854",
+    "trackingId": null,
+    "title": "шелковая наволочка",
+    "description": "Сон на наволочке AYRIS снижает появление ночных морщин и заломов на лице. Кожа дышит и сохраняет естественный pH.",
+    "price": {
+      "price": 9000,
+      "currency": "RUB"
+    },
+    "externalUri": "https://ayris-silk.ru/catalog/pillowcases/100-silk/shyolkovaya-navolochka-50-70?mod=skystar&utm_source=ohmywishes",
+    "photos": [],
+    "icon": null,
+    "isOneTimeGift": false,
+    "isPrivate": false,
+    "visibility": "public",
+    "isFulfilled": false,
+    "creator": {
+      "id": "ba63dbb5c7c0cc6124659619",
+      "username": "milkh8er",
+      "avatar": null,
+      "fullname": "tasha",
+      "isPro": false,
+      "accountType": "user"
+    },
+    "isCopiedByMe": false,
+    "isAssignedBySomeone": true,
+    "isAssignedByMe": true,
+    "isReservedBySomeone": true,
+    "isReservedByMe": true,
+    "reservedUntil": "2026-09-12 15:43:44",
+    "isIdea": false,
+    "isExternalUriBlocked": false,
+    "promoCode": null,
+    "wishLists": [
+      {
+        "id": "9c64dc875d74e45860892870",
+        "title": "household"
+      }
+    ],
+    "isExplicit": false,
+    "isForeignAgentIdea": false,
+    "actionButtonText": "where_to_buy",
+    "canonicalUrl": null,
+    "sticker": null
+  }
+}

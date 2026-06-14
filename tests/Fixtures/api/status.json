@@ -1,0 +1,26 @@
+{
+  "isEnabled": false,
+  "platforms": [
+    {
+      "platform": "all",
+      "versions": [
+        {
+          "version": "all",
+          "color": "#F3463B",
+          "messageColor": "#FFFFFF",
+          "icon": "https://status.example.com/warning.svg",
+          "message": [
+            {
+              "lang": "ru",
+              "text": "Техработы"
+            },
+            {
+              "lang": "default",
+              "text": "Maintenance"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

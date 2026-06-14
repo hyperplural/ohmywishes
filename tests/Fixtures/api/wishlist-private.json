@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "_id": "35677c5e7e2b202855025056",
+      "trackingId": null,
+      "createdAt": "2025-01-06T22:51:42.000Z",
+      "updatedAt": "2025-01-06T22:51:42.000Z",
+      "title": "hidden item",
+      "description": null,
+      "price": null,
+      "link": null,
+      "photo": null,
+      "photos": [],
+      "icon": null,
+      "color": null,
+      "private": true,
+      "visibility": "private",
+      "fulfilled": false,
+      "currency": "RUB",
+      "creatorId": "bb677c0ecd14900917853653",
+      "creator": null,
+      "copiedByMe": false,
+      "assigned": false,
+      "assignedByMe": false,
+      "idea": false,
+      "reservedUntil": null,
+      "isExternalUriBlocked": false,
+      "wish_lists": [],
+      "actionButtonText": "where_to_buy",
+      "assignee": null,
+      "oneTimeGift": false
+    }
+  ]
+}

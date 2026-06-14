@@ -1,0 +1,12 @@
+{
+  "items": [
+    {
+      "code": "world",
+      "title": "Мир"
+    },
+    {
+      "code": "russia",
+      "title": "Россия"
+    }
+  ]
+}

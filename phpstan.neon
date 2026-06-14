@@ -1,0 +1,13 @@
+parameters:
+    level: 7
+    paths:
+        - src
+        - tests
+    tmpDir: var/phpstan
+    parallel:
+        maximumNumberOfProcesses: 1
+    checkMissingIterableValueType: true
+    checkGenericClassInNonGenericObjectType: true
+    treatPhpDocTypesAsCertain: true
+    bootstrapFiles:
+        - tests/bootstrap.php

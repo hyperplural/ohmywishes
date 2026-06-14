@@ -1,0 +1,39 @@
+[
+  {
+    "_id": "35677c5e7e2b202855025056",
+    "trackingId": null,
+    "createdAt": "2025-01-06T22:51:42.000Z",
+    "updatedAt": "2025-01-06T22:51:42.000Z",
+    "title": "iphone 15 pro / apple",
+    "description": "sim: nanosim+esim",
+    "price": 970,
+    "link": null,
+    "photo": "/s3/images/wish-photo/2025/01/06/1CJwuTQRu48KCUvSuirSp6.webp",
+    "photos": [],
+    "icon": null,
+    "color": "#9b9b9b",
+    "private": false,
+    "visibility": "public",
+    "fulfilled": true,
+    "currency": "USD",
+    "creatorId": "bb677c0ecd14900917853653",
+    "creator": {
+      "_id": "bb677c0ecd14900917853653",
+      "username": "dream",
+      "avatar": null,
+      "fullName": "vasily ",
+      "isPro": false,
+      "accountType": "user"
+    },
+    "copiedByMe": false,
+    "assigned": false,
+    "assignedByMe": false,
+    "idea": false,
+    "reservedUntil": null,
+    "isExternalUriBlocked": false,
+    "wish_lists": [],
+    "actionButtonText": "where_to_buy",
+    "assignee": null,
+    "oneTimeGift": false
+  }
+]

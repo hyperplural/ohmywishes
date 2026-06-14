@@ -1,0 +1,54 @@
+{
+  "item": {
+    "code": "russia",
+    "title": "Россия",
+    "currency": "RUB",
+    "mainPageText": "text",
+    "seoDefaults": {
+      "h1Text": "h1",
+      "metaKeywords": "keywords",
+      "ogImage": {
+        "url": "https://cdn.example.com/og.png",
+        "width": 1200,
+        "height": 630,
+        "thumbnails": []
+      }
+    },
+    "seoTemplates": {
+      "title": {
+        "startPage": "start"
+      },
+      "description": {
+        "startPage": "description"
+      }
+    },
+    "links": {
+      "support": "https://support.example.com"
+    },
+    "socialNetworks": {
+      "telegram": {
+        "link": "https://t.me/example"
+      }
+    },
+    "options": {
+      "oauth2": {
+        "vk": true
+      },
+      "auth": [
+        {
+          "code": "email"
+        }
+      ],
+      "captchaProviders": [
+        "turnstile"
+      ],
+      "simplifiedIdeasPage": false
+    },
+    "siteLogoImage": {
+      "url": "https://cdn.example.com/logo.svg",
+      "width": null,
+      "height": null,
+      "thumbnails": []
+    }
+  }
+}

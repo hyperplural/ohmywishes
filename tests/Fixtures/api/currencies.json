@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "code": "RUB",
+      "symbol": "₽",
+      "template": "{value} {symbol}",
+      "title": "Рубль"
+    },
+    {
+      "code": "USD",
+      "symbol": "$",
+      "template": "{symbol} {value}",
+      "title": "Доллар"
+    }
+  ]
+}

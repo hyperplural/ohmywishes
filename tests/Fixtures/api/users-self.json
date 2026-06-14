@@ -1,0 +1,41 @@
+{
+  "_id": "bb677c0ecd14900917853653",
+  "username": "dream",
+  "fullName": "vasily ",
+  "photo": "/s3/images/user-avatar/2026/06/14/1Cc3KHPzP6XTZPGLce1sTJ.webp",
+  "avatar": {
+    "width": 267,
+    "height": 400,
+    "url": "https://cdn.ohmywishes.com/images/user-avatar/2026/06/14/1Cc3KHPzP6XTZPGLce1sTJ.webp",
+    "thumbnails": [
+      {
+        "width": 53,
+        "height": 80,
+        "url": "https://cdn.ohmywishes.com/images/thumbnail/2026/06/14/1Cc3KHTg8dmFAa5jAD2bde.webp"
+      },
+      {
+        "width": 107,
+        "height": 160,
+        "url": "https://cdn.ohmywishes.com/images/thumbnail/2026/06/14/1Cc3KHStVwqNEN1CNFvTw5.webp"
+      }
+    ]
+  },
+  "bio": "",
+  "birthday": null,
+  "sex": null,
+  "systemNewsActive": false,
+  "newsActive": false,
+  "email": "alexei.petrov@example.com",
+  "isEmailConfirmed": true,
+  "lastName": "",
+  "firstName": "vasily",
+  "isPro": false,
+  "accountType": "user",
+  "socialProfiles": [
+    "yandex"
+  ],
+  "followersCount": 1,
+  "followingsCount": 1,
+  "wishesCount": 11,
+  "assignedWishesBySomebody": 0
+}

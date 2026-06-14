@@ -1,0 +1,18 @@
+{
+  "item": {
+    "sending": {
+      "myNewWish": true,
+      "myBirthday": false
+    },
+    "receiving": {
+      "push": {
+        "myWishReservation": true,
+        "newFollower": false
+      },
+      "email": {
+        "myWishReservation": false,
+        "newFollower": false
+      }
+    }
+  }
+}

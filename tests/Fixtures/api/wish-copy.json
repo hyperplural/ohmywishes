@@ -1,0 +1,44 @@
+{
+  "_id": "c86a2ecb511aa17832721702",
+  "trackingId": "bc69300afc14119251553063",
+  "createdAt": "2026-06-14T15:40:01.000Z",
+  "updatedAt": "2026-06-14T15:40:01.000Z",
+  "title": "Подарочный сертификат — INVITRO",
+  "description": "Подарите близким здоровье.",
+  "price": 1000,
+  "link": "https://www.invitro.ru/piter/l/podarochnye-sertifikaty?utm_source=ohmywishes",
+  "photo": "/s3/images/wish-photo/2026/06/14/1Cc3QPtoiof8yce8VYy4cf.webp",
+  "photos": [
+    {
+      "width": 507,
+      "height": 613,
+      "url": "https://cdn.ohmywishes.com/images/wish-photo/2026/06/14/1Cc3QPtoiof8yce8VYy4cf.webp",
+      "thumbnails": []
+    }
+  ],
+  "icon": null,
+  "color": "#000000",
+  "private": false,
+  "visibility": "public",
+  "fulfilled": false,
+  "currency": "RUB",
+  "creatorId": "bb677c0ecd14900917853653",
+  "creator": {
+    "_id": "bb677c0ecd14900917853653",
+    "username": "dream",
+    "avatar": null,
+    "fullName": "vasily ",
+    "isPro": false,
+    "accountType": "user"
+  },
+  "copiedByMe": false,
+  "assigned": false,
+  "assignedByMe": false,
+  "idea": false,
+  "reservedUntil": null,
+  "isExternalUriBlocked": false,
+  "wish_lists": [],
+  "actionButtonText": "where_to_buy",
+  "assignee": null,
+  "oneTimeGift": false
+}
