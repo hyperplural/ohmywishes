@@ -74,7 +74,7 @@ final class AuthService extends AbstractService
             return $captchaToken;
         }
 
-        if ($this->captchaTokenResolver !== null) {
+        if ($this->captchaTokenResolver instanceof Closure) {
             $resolvedToken = ($this->captchaTokenResolver)($purpose, $context);
 
             if (!is_string($resolvedToken) || $resolvedToken === '') {
