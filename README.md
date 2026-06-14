@@ -1,15 +1,8 @@
-<p align="center">
-  <img src="assets/ohmywishes-logo.svg" alt="Ohmywishes" width="240">
-</p>
+# <img src="assets/ohmywishes-favicon.svg" alt="" width="24" height="24"> Ohmywishes SDK Client
 
-# Ohmywishes SDK Client
+Неофициальный PHP SDK для Ohmywishes.
 
-Неофициальный PHP SDK-клиент для Ohmywishes, построенный на публично наблюдаемом API.
-
-## Важно
-
-Это неофициальная библиотека. Она не связана с проектом Ohmywishes и не поддерживается им.
-Контракт основан на публичных HTTP-эндпоинтах, поэтому поведение API может меняться без предупреждения.
+Проект не связан с Ohmywishes и не поддерживается ими.
 
 ## Установка
 
@@ -38,16 +31,6 @@ $profile = $client->users()->self();
 echo $profile->fullName;
 ```
 
-## Что покрывает SDK
-
-- профиль и настройки текущего пользователя
-- wishes и wish lists
-- резервация, отмена резерва и копирование wishes
-- email-login и смена email
-- справочники валют, регионов и статуса сервиса
-- настройки уведомлений и приватности профиля
-- public selection/ideas endpoints
-
 ## Документация
 
 - [`docs/README.md`](docs/README.md) - входная точка по документации
@@ -56,19 +39,6 @@ echo $profile->fullName;
 - [`docs/public.md`](docs/public.md) - публичный status API
 - [`docs/api-spec.md`](docs/api-spec.md) - appendix с заметками, нормализацией и DTO-наблюдениями
 
-## Разработка
+## Лицензия
 
-- `composer test`
-- `composer cs:check`
-- `composer stan`
-- `composer rector:check`
-
-## Коммиты
-
-Используем Conventional Commits:
-
-- `feat: add wish copy endpoint`
-- `fix(api): handle empty JSON body`
-- `docs: update API contract`
-
-Если у коммита есть scope, формат такой: `type(scope): subject`.
+MIT. См. [`LICENSE`](LICENSE).
