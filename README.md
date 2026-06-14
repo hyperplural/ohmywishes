@@ -48,7 +48,7 @@ echo $profile->fullName;
 
 For support, questions, or coordination:
 
-- Discord: [692452546744287305](https://discordapp.com/users/692452546744287305)
+- Telegram: [@hyperplural](https://t.me/hyperplural)
 
 ## License
 
