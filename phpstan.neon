@@ -4,8 +4,6 @@ parameters:
         - src
         - tests
     tmpDir: var/phpstan
-    parallel:
-        maximumNumberOfProcesses: 1
     checkMissingIterableValueType: true
     checkGenericClassInNonGenericObjectType: true
     treatPhpDocTypesAsCertain: true

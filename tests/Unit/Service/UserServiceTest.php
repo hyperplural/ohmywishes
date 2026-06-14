@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Hyperplural\Ohmywishes\Tests\Unit\Service;
 
+use CURLFile;
 use Hyperplural\Ohmywishes\Auth\StaticTokenProvider;
 use Hyperplural\Ohmywishes\Client\OhMyWishesClient;
 use Hyperplural\Ohmywishes\Http\TransportResponse;
@@ -115,7 +116,7 @@ final class UserServiceTest extends TestCase
             self::assertSame('alice@example.com', $avatarDto->email);
             self::assertSame('/api/v2/users/self/avatars', $avatarTransport->requests[0]['path']);
             self::assertArrayHasKey('picture', $avatarTransport->requests[0]['multipart']);
-            self::assertInstanceOf(\CURLFile::class, $avatarTransport->requests[0]['multipart']['picture']);
+            self::assertInstanceOf(CURLFile::class, $avatarTransport->requests[0]['multipart']['picture']);
         } finally {
             unlink($avatarFile);
         }

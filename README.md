@@ -31,6 +31,21 @@ $profile = $client->users()->self();
 echo $profile->fullName;
 ```
 
+If you want to resolve Cloudflare captcha tokens lazily, pass a callback when creating the auth service:
+
+```php
+$client->auth(function (string $purpose, array $context): string {
+    return getCaptchaTokenSomehow($purpose, $context);
+})->requestPhoneNumberConfirmationCode('+79990000000');
+```
+
+If you need raw HTTP payloads instead of DTOs:
+
+```php
+$response = $client->raw()->request('GET', '/api/v3/client');
+$payload = $response->json();
+```
+
 ## Documentation
 
 - [`docs/README.md`](docs/README.md) - documentation entry point

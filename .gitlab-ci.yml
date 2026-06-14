@@ -1,0 +1,43 @@
+image: composer:2
+
+stages:
+  - test
+  - quality
+
+variables:
+  COMPOSER_CACHE_DIR: "$CI_PROJECT_DIR/.composer-cache"
+  COMPOSER_ALLOW_SUPERUSER: "1"
+
+cache:
+  key: composer-cache
+  paths:
+    - .composer-cache/
+    - vendor/
+
+.composer_install: &composer_install
+  before_script:
+    - composer install --no-interaction --prefer-dist --no-progress --no-ansi
+
+unit:
+  stage: test
+  <<: *composer_install
+  script:
+    - vendor/bin/phpunit --testsuite unit --display-errors
+
+phpcs:
+  stage: quality
+  <<: *composer_install
+  script:
+    - vendor/bin/php-cs-fixer fix --dry-run --diff --config=.php-cs-fixer.php --sequential
+
+phpstan:
+  stage: quality
+  <<: *composer_install
+  script:
+    - vendor/bin/phpstan analyse --configuration=phpstan.neon --no-progress --memory-limit=1G
+
+rector:
+  stage: quality
+  <<: *composer_install
+  script:
+    - vendor/bin/rector process --dry-run --config=rector.php
