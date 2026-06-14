@@ -1,4 +1,6 @@
-# <img src="assets/ohmywishes-favicon.svg" alt="" width="24" height="24"> Ohmywishes SDK Client
+![Ohmywishes](assets/ohmywishes-favicon.svg)
+
+# Ohmywishes SDK Client
 
 Unofficial PHP SDK for Ohmywishes.
 
@@ -44,9 +46,11 @@ echo $profile->fullName;
 - Ohmywishes for the product and the public HTTP surface this SDK mirrors.
 - The favicon used in this README comes from the public Ohmywishes site favicon.
 
-## Support
+## Support & Contact
 
-If you want to support ongoing maintenance, add your Buy Me a Coffee link here.
+For support, questions, or coordination:
+
+- Discord: [692452546744287305](https://discordapp.com/users/692452546744287305)
 
 ## License
 
