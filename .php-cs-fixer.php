@@ -17,7 +17,7 @@ return (new Config())
         'declare_strict_types' => true,
         'array_syntax' => ['syntax' => 'short'],
         'global_namespace_import' => [
-            'import_classes' => false,
+            'import_classes' => true,
             'import_constants' => false,
             'import_functions' => true,
         ],

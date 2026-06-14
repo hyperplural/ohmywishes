@@ -9,6 +9,7 @@ use Hyperplural\Ohmywishes\Exception\ApiException;
 use Hyperplural\Ohmywishes\Http\NativeTransport;
 use Hyperplural\Ohmywishes\Http\TransportInterface;
 use Hyperplural\Ohmywishes\Http\TransportResponse;
+use Hyperplural\Ohmywishes\Raw\RawFacade;
 
 final class OhMyWishesClient
 {
@@ -27,9 +28,9 @@ final class OhMyWishesClient
         return new \Hyperplural\Ohmywishes\Service\ClientService($this);
     }
 
-    public function auth(): \Hyperplural\Ohmywishes\Service\AuthService
+    public function auth(?callable $captchaTokenResolver = null): \Hyperplural\Ohmywishes\Service\AuthService
     {
-        return new \Hyperplural\Ohmywishes\Service\AuthService($this);
+        return new \Hyperplural\Ohmywishes\Service\AuthService($this, $captchaTokenResolver);
     }
 
     public function users(): \Hyperplural\Ohmywishes\Service\UserService
@@ -55,6 +56,11 @@ final class OhMyWishesClient
     public function reference(): \Hyperplural\Ohmywishes\Service\ReferenceService
     {
         return new \Hyperplural\Ohmywishes\Service\ReferenceService($this);
+    }
+
+    public function raw(): RawFacade
+    {
+        return new RawFacade($this);
     }
 
     /**

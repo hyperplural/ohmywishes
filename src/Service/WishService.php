@@ -4,8 +4,10 @@ declare(strict_types=1);
 
 namespace Hyperplural\Ohmywishes\Service;
 
+use CURLFile;
 use Hyperplural\Ohmywishes\Dto\Wish\WishDto;
 use Hyperplural\Ohmywishes\Dto\Wish\WishListWishDto;
+use InvalidArgumentException;
 
 use function is_file;
 use function is_readable;
@@ -71,7 +73,7 @@ final class WishService extends AbstractService
     public function uploadPicture(string $wishId, string $filePath): WishDto
     {
         if (!is_file($filePath) || !is_readable($filePath)) {
-            throw new \InvalidArgumentException('Picture file is not readable: ' . $filePath);
+            throw new InvalidArgumentException('Picture file is not readable: ' . $filePath);
         }
 
         $response = $this->request(
@@ -81,7 +83,7 @@ final class WishService extends AbstractService
             null,
             [],
             [
-                'picture' => new \CURLFile($filePath),
+                'picture' => new CURLFile($filePath),
             ],
         );
 

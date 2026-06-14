@@ -589,6 +589,68 @@ Notes:
 - `expiresIn` appears to be seconds.
 - The returned `token` is a bearer/session token and should not be persisted in docs or logs.
 
+### `POST /api/v3/auth/phone-number/confirmation-code`
+
+Requests a login confirmation code for phone-number authentication.
+
+Request body observed:
+
+```json
+{
+  "phoneNumber": "+79990000000",
+  "captchaToken": "turnstile:..."
+}
+```
+
+Observed response:
+
+- HTTP `202 Accepted`
+- body: `null`
+
+DTO candidates:
+
+- `RequestAuthPhoneNumberCodeDto`
+
+Notes:
+
+- `captchaToken` is required in the observed flow.
+- The phone number must be linked to the account's supported login flow.
+
+### `POST /api/v3/auth/phone-number/login`
+
+Completes phone-number login using the confirmation code.
+
+Request body observed:
+
+```json
+{
+  "phoneNumber": "+79990000000",
+  "confirmationCode": "7272"
+}
+```
+
+Observed response:
+
+```json
+{
+  "item": {
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9....",
+    "expiresIn": 31536000
+  }
+}
+```
+
+DTO candidates:
+
+- `AuthTokenResponseDto`
+- `AuthTokenDto`
+
+Notes:
+
+- The response shape matches the email login flow.
+- `expiresIn` appears to be seconds.
+- The returned `token` is a bearer/session token and should not be persisted in docs or logs.
+
 ## Favorites
 
 ### `POST /api/v2/users/{userId}/favorite`

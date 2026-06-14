@@ -4,9 +4,11 @@ declare(strict_types=1);
 
 namespace Hyperplural\Ohmywishes\Service;
 
+use CURLFile;
 use Hyperplural\Ohmywishes\Dto\User\PublicUserProfileDto;
 use Hyperplural\Ohmywishes\Dto\User\SelfUserDto;
 use Hyperplural\Ohmywishes\Dto\User\UserListItemDto;
+use InvalidArgumentException;
 
 use function is_file;
 use function is_readable;
@@ -38,7 +40,7 @@ final class UserService extends AbstractService
     public function uploadAvatar(string $filePath): SelfUserDto
     {
         if (!is_file($filePath) || !is_readable($filePath)) {
-            throw new \InvalidArgumentException('Avatar file is not readable: ' . $filePath);
+            throw new InvalidArgumentException('Avatar file is not readable: ' . $filePath);
         }
 
         $response = $this->request(
@@ -48,7 +50,7 @@ final class UserService extends AbstractService
             null,
             [],
             [
-                'picture' => new \CURLFile($filePath),
+                'picture' => new CURLFile($filePath),
             ],
         );
 

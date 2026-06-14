@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyperplural\Ohmywishes\Http;
 
 use Hyperplural\Ohmywishes\Exception\ApiException;
+use JsonException;
 
 use function json_decode;
 
@@ -28,7 +29,7 @@ final class TransportResponse
 
         try {
             return json_decode($this->body, true, 512, JSON_THROW_ON_ERROR);
-        } catch (\JsonException $exception) {
+        } catch (JsonException $exception) {
             throw ApiException::invalidJson($this->body, $exception->getMessage(), $exception);
         }
     }

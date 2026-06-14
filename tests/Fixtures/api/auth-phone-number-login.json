@@ -1,0 +1,6 @@
+{
+  "item": {
+    "token": "test-token",
+    "expiresIn": 31536000
+  }
+}
