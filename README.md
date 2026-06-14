@@ -1,6 +1,4 @@
-![Ohmywishes](assets/ohmywishes-favicon.svg)
-
-# Ohmywishes SDK Client
+# ![Ohmywishes](assets/ohmywishes-favicon.svg) Ohmywishes SDK Client
 
 Unofficial PHP SDK for Ohmywishes.
 
