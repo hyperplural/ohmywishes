@@ -1,16 +1,16 @@
 # <img src="assets/ohmywishes-favicon.svg" alt="" width="24" height="24"> Ohmywishes SDK Client
 
-Неофициальный PHP SDK для Ohmywishes.
+Unofficial PHP SDK for Ohmywishes.
 
-Проект не связан с Ohmywishes и не поддерживается ими.
+This project is not affiliated with Ohmywishes and is not maintained by them.
 
-## Установка
+## Installation
 
 ```bash
 composer require hyperplural/ohmywishes
 ```
 
-## Быстрый старт
+## Quick Start
 
 ```php
 <?php
@@ -31,14 +31,23 @@ $profile = $client->users()->self();
 echo $profile->fullName;
 ```
 
-## Документация
+## Documentation
 
-- [`docs/README.md`](docs/README.md) - входная точка по документации
-- [`docs/v2.md`](docs/v2.md) - API `v2`
-- [`docs/v3.md`](docs/v3.md) - API `v3`
-- [`docs/public.md`](docs/public.md) - публичный status API
-- [`docs/api-spec.md`](docs/api-spec.md) - appendix с заметками, нормализацией и DTO-наблюдениями
+- [`docs/README.md`](docs/README.md) - documentation entry point
+- [`docs/v2.md`](docs/v2.md) - `v2` API
+- [`docs/v3.md`](docs/v3.md) - `v3` API
+- [`docs/public.md`](docs/public.md) - public status API
+- [`docs/api-spec.md`](docs/api-spec.md) - appendix with notes, normalization, and DTO observations
 
-## Лицензия
+## Credits
 
-MIT. См. [`LICENSE`](LICENSE).
+- Ohmywishes for the product and the public HTTP surface this SDK mirrors.
+- The favicon used in this README comes from the public Ohmywishes site favicon.
+
+## Support
+
+If you want to support ongoing maintenance, add your Buy Me a Coffee link here.
+
+## License
+
+MIT. See [`LICENSE`](LICENSE).
