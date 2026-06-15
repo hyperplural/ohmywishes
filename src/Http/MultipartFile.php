@@ -10,6 +10,9 @@ use function basename;
 
 final class MultipartFile
 {
+    /**
+     * @param array<string, string> $headers
+     */
     public function __construct(
         public readonly string $name,
         public readonly mixed $contents,

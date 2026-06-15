@@ -106,6 +106,9 @@ final class GuzzleTransport implements TransportInterface
         return $normalized;
     }
 
+    /**
+     * @param array<string, scalar|null> $query
+     */
     private function normalizePath(string $path, array $query): string
     {
         $uri = preg_match('~^https?://~i', $path) === 1
