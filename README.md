@@ -46,6 +46,22 @@ $response = $client->raw()->request('GET', '/api/v3/client');
 $payload = $response->json();
 ```
 
+To customize HTTP behavior, pass Guzzle options through `ClientConfig` or inject your own PSR-18 client and PSR-17 factories into `GuzzleTransport`:
+
+```php
+use Hyperplural\Ohmywishes\Client\ClientConfig;
+use Hyperplural\Ohmywishes\Client\OhMyWishesClient;
+
+$client = new OhMyWishesClient(
+    new ClientConfig(
+        guzzleOptions: [
+            'timeout' => 10,
+            'proxy' => 'http://127.0.0.1:8080',
+        ],
+    ),
+);
+```
+
 ## Documentation
 
 - [`docs/README.md`](docs/README.md) - documentation entry point
@@ -58,6 +74,7 @@ $payload = $response->json();
 
 - Ohmywishes for the product and the public HTTP surface this SDK mirrors.
 - The favicon used in this README comes from the public Ohmywishes site favicon.
+- The HTTP layer is built on Guzzle and PSR-18/17 interfaces.
 
 ## Support & Contact
 

@@ -6,7 +6,7 @@ namespace Hyperplural\Ohmywishes\Client;
 
 use Hyperplural\Ohmywishes\Auth\TokenProviderInterface;
 use Hyperplural\Ohmywishes\Exception\ApiException;
-use Hyperplural\Ohmywishes\Http\NativeTransport;
+use Hyperplural\Ohmywishes\Http\GuzzleTransport;
 use Hyperplural\Ohmywishes\Http\TransportInterface;
 use Hyperplural\Ohmywishes\Http\TransportResponse;
 use Hyperplural\Ohmywishes\Raw\RawFacade;
@@ -20,7 +20,10 @@ final class OhMyWishesClient
         private readonly ?TokenProviderInterface $tokenProvider = null,
         ?TransportInterface $transport = null,
     ) {
-        $this->transport = $transport ?? new NativeTransport($this->config->baseUri);
+        $this->transport = $transport ?? new GuzzleTransport(
+            $this->config->baseUri,
+            $this->config->guzzleOptions,
+        );
     }
 
     public function client(): \Hyperplural\Ohmywishes\Service\ClientService
@@ -67,7 +70,7 @@ final class OhMyWishesClient
      * @param array<string, scalar|null> $query
      * @param array<string, mixed>|null $body
      * @param array<string, string> $headers
-     * @param array<string, mixed>|null $multipart
+     * @param array<int, array<string, mixed>>|null $multipart
      */
     public function request(
         string $method,

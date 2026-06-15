@@ -10,7 +10,7 @@ interface TransportInterface
      * @param array<string, scalar|null> $query
      * @param array<string, string> $headers
      * @param array<string, mixed>|null $body
-     * @param array<string, mixed>|null $multipart
+     * @param array<int, array<string, mixed>>|null $multipart
      */
     public function request(
         string $method,

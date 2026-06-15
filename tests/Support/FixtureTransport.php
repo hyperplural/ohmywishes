@@ -10,7 +10,7 @@ use Hyperplural\Ohmywishes\Http\TransportResponse;
 final class FixtureTransport implements TransportInterface
 {
     /**
-     * @var array<int, array{method: string, path: string, query: array<string, scalar|null>, body: array<string, mixed>|null, headers: array<string, string>, multipart: array<string, mixed>|null}>
+     * @var array<int, array{method: string, path: string, query: array<string, scalar|null>, body: array<string, mixed>|null, headers: array<string, string>, multipart: array<int, array<string, mixed>>|null}>
      */
     public array $requests = [];
 

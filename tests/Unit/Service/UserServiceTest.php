@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Hyperplural\Ohmywishes\Tests\Unit\Service;
 
-use CURLFile;
 use Hyperplural\Ohmywishes\Auth\StaticTokenProvider;
 use Hyperplural\Ohmywishes\Client\OhMyWishesClient;
 use Hyperplural\Ohmywishes\Http\TransportResponse;
@@ -12,6 +11,7 @@ use Hyperplural\Ohmywishes\Tests\Support\FixtureLoader;
 use Hyperplural\Ohmywishes\Tests\Support\FixtureTransport;
 use PHPUnit\Framework\TestCase;
 
+use function basename;
 use function file_put_contents;
 use function tempnam;
 use function unlink;
@@ -115,8 +115,10 @@ final class UserServiceTest extends TestCase
 
             self::assertSame('alice@example.com', $avatarDto->email);
             self::assertSame('/api/v2/users/self/avatars', $avatarTransport->requests[0]['path']);
-            self::assertArrayHasKey('picture', $avatarTransport->requests[0]['multipart']);
-            self::assertInstanceOf(CURLFile::class, $avatarTransport->requests[0]['multipart']['picture']);
+            self::assertCount(1, $avatarTransport->requests[0]['multipart']);
+            self::assertSame('picture', $avatarTransport->requests[0]['multipart'][0]['name']);
+            self::assertSame(basename($avatarFile), $avatarTransport->requests[0]['multipart'][0]['filename']);
+            self::assertIsResource($avatarTransport->requests[0]['multipart'][0]['contents']);
         } finally {
             unlink($avatarFile);
         }

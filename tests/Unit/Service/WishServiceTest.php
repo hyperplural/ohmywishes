@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Hyperplural\Ohmywishes\Tests\Unit\Service;
 
-use CURLFile;
 use Hyperplural\Ohmywishes\Auth\StaticTokenProvider;
 use Hyperplural\Ohmywishes\Client\OhMyWishesClient;
 use Hyperplural\Ohmywishes\Http\TransportResponse;
@@ -13,6 +12,7 @@ use Hyperplural\Ohmywishes\Tests\Support\FixtureTransport;
 use Hyperplural\Ohmywishes\Tests\Support\QueueTransport;
 use PHPUnit\Framework\TestCase;
 
+use function basename;
 use function file_put_contents;
 use function tempnam;
 use function unlink;
@@ -112,8 +112,10 @@ final class WishServiceTest extends TestCase
 
             self::assertSame('346a2edca32a5c2744383491', $dto->id);
             self::assertSame('/api/v2/users/self/wishes/346a2edca32a5c2744383491/picture', $transport->requests[0]['path']);
-            self::assertArrayHasKey('picture', $transport->requests[0]['multipart']);
-            self::assertInstanceOf(CURLFile::class, $transport->requests[0]['multipart']['picture']);
+            self::assertCount(1, $transport->requests[0]['multipart']);
+            self::assertSame('picture', $transport->requests[0]['multipart'][0]['name']);
+            self::assertSame(basename($picturePath), $transport->requests[0]['multipart'][0]['filename']);
+            self::assertIsResource($transport->requests[0]['multipart'][0]['contents']);
         } finally {
             unlink($picturePath);
         }
