@@ -11,6 +11,10 @@ final class ClientConfig
         public readonly string $contentRegion = 'russia',
         public readonly string $locale = 'ru',
         public readonly ?string $userAgent = null,
+        /**
+         * @var array<string, mixed>
+         */
+        public readonly array $guzzleOptions = [],
     ) {
     }
 }

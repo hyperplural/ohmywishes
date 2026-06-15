@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Hyperplural\Ohmywishes\Service;
 
-use CURLFile;
 use Hyperplural\Ohmywishes\Dto\Wish\WishDto;
 use Hyperplural\Ohmywishes\Dto\Wish\WishListWishDto;
 use InvalidArgumentException;
@@ -82,9 +81,7 @@ final class WishService extends AbstractService
             [],
             null,
             [],
-            [
-                'picture' => new CURLFile($filePath),
-            ],
+            [$this->multipartFile($filePath)->toGuzzlePart()],
         );
 
         $item = is_array($response) ? $response : [];

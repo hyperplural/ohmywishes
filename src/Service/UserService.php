@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Hyperplural\Ohmywishes\Service;
 
-use CURLFile;
 use Hyperplural\Ohmywishes\Dto\User\PublicUserProfileDto;
 use Hyperplural\Ohmywishes\Dto\User\SelfUserDto;
 use Hyperplural\Ohmywishes\Dto\User\UserListItemDto;
@@ -49,9 +48,7 @@ final class UserService extends AbstractService
             [],
             null,
             [],
-            [
-                'picture' => new CURLFile($filePath),
-            ],
+            [$this->multipartFile($filePath)->toGuzzlePart()],
         );
 
         return SelfUserDto::fromArray(is_array($response) ? $response : []);
